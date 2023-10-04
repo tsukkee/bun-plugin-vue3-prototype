@@ -1,40 +1,31 @@
-# bun-vue-prototype
+# BunのVueプラグイン(超簡易版)
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```
+bun install
+bun build.ts
 ```
 
-### Compile and Hot-Reload for Development
+したのち、dist/index.htmlをブラウザで開くと、一応src/App.vueが動く。
+styleをうまくハンドルできていないほか、何かも最低限の状態。
 
-```sh
-npm run dev
+なお、お試しで書いてみただけで今後活発に開発する予定はありません。
+
+# 参考
+BunのPlugin APIはESBuildを参考にしているらしいので[esbuild-plugin-vue3](https://github.com/pipe01/esbuild-plugin-vue3/tree/master)をめちゃくちゃ参考にしています。
+
+---
+
+# Vue plugin for Bun (verrrry early & prototype version)
+
+```
+bun install
+bun build.ts
 ```
 
-### Type-Check, Compile and Minify for Production
+Run above commands and open dist/index.html in your browser. Then, you can see src/App.vue.
+This plugin cannot handle styles correctly and other parts are also very tentative.
 
-```sh
-npm run build
-```
+And, this is just prototyping for me so I don't have any plans to develop this more.
+
+# Reference
+I refer [esbuild-plugin-vue3](https://github.com/pipe01/esbuild-plugin-vue3/tree/master) becuase Bun Plugin API follows ESBuild's one.
