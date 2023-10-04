@@ -6,7 +6,8 @@
     "cypress.config.*",
     "nightwatch.conf.*",
     "playwright.config.*",
-    "build.ts"
+    "build.ts",
+    "bun-vue-plugin.ts"
   ],
   "compilerOptions": {
     "composite": true,
